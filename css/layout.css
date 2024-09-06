@@ -1,0 +1,165 @@
+/* https://ale-kea.dk/T7-ekempel-site-statisk/productlist.html */
+
+/* ------------------------ INDEX ------------------------*/
+/*------------------------- KATEGORI -----------------------*/
+
+.kategoriliste {
+  /* Denne class er listen/oversigten over kategorierne */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+}
+.designbox {
+  /* Denne class er designet på oversigten(boxene) over kategorierne */
+  background-color: rgba(135, 0, 0, 1);
+  color: white;
+  text-decoration: none;
+  padding: 2em;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+/*---------------------- PRODUKTLISTE ------------------------*/
+
+.article {
+  /* Denne class bestemmer hvordan indholdet i article opfører sig*/
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.lystekst {
+  color: rgba(135, 0, 0, 0.5);
+}
+/* Herunder bestemmes de class som viser soldout på img */
+.soldout {
+  /* Denne gør billedet gråt/utydeligt */
+  opacity: 0.5;
+}
+.soldout::before {
+  content: "SOLD OUT";
+  position: absolute;
+  background: rgb(95, 0, 0);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.article {
+  border: 2px solid rgba(135, 0, 0, 0.5);
+  padding: 1em;
+}
+.link {
+  text-decoration: underline;
+  color: rgba(135, 0, 0, 1);
+}
+
+.discounted {
+  display: none;
+}
+
+.discounted p:last-child {
+  background: rgba(135, 0, 0, 1);
+  padding: 0.2rem;
+  color: white;
+  border-radius: 3px;
+  width: 18%;
+}
+
+/* ---------------------------------- */
+
+@media (min-width: 800px) {
+  /* Denne media@ er for en STOR skærm */
+  #sectionproduktliste {
+    /* Denne class opdeler de 4 articles i grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 799px) {
+  /* Denne media@ er for en LILLE skærm */
+  #sectionproduktliste {
+    /* Denne class opdeler de 4 articles i grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+/*-------------------------- PRODUKT ----------------------------*/
+
+.strong {
+  font-weight: bold;
+  margin-top: 1em;
+}
+ul {
+  list-style: none;
+  margin-bottom: 1em;
+}
+.bestillabel {
+  display: flex;
+}
+.gridimgbestil {
+  border: 1px solid rgba(135, 0, 0, 0.5);
+  /* margin-left: 6em;*/
+  margin-right: 15em;
+}
+.sectionbestil {
+  /* Denne class bestemmer over hele bestil sectionen med størrelse og læg i kurv */
+  background-color: rgba(135, 0, 0, 0.087);
+  padding: 2em;
+  line-height: 4em;
+  border: 1px solid rgba(135, 0, 0, 0.5);
+}
+.imgprodukt {
+  /* Dette placerer billede i midten */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 1px solid rgba(135, 0, 0, 0.5);
+}
+.bestilform {
+  /* Dette bestemmer over indholdet i form */
+  font-weight: bold;
+  text-align: center;
+}
+.bestilselect {
+  /* Dette bestemmer designet til size knappen */
+  border-radius: 15px;
+  padding: 0.8em 1em;
+  font-size: 1rem;
+  background-color: white;
+  color: rgba(135, 0, 0, 1);
+  cursor: pointer;
+  border: 2px solid rgba(135, 0, 0, 0.5);
+  align-self: center;
+  margin-left: 1em;
+}
+.button {
+  /* Dette bestemmer designet til basket knappen */
+  padding: 1.5em 2.5em;
+  margin-top: 5em;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  background-color: white;
+  color: rgba(135, 0, 0, 1);
+  cursor: pointer;
+  border: 2px solid rgba(135, 0, 0, 0.5);
+  align-self: center;
+}
+.info {
+  line-height: 2em;
+}
+.infoh2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+@media (min-width: 800px) {
+  /* Denne media@ er for en STOR skærm */
+  .gridimgbestil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produktliste</title>
+    <link rel="stylesheet" href="../css/generel.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="headergrid">
+          <div class="headerlogo">
+            <a href="../index.html"
+              ><img class="logo" src="../logo.png" alt="logo"
+            /></a>
+          </div>
+          <div class="headermenu">
+            <ul class="headerul">
+              <li class="headerli">
+                <a href="../index.html">Home</a>
+              </li>
+              <li class="headerli">
+                <a href="kategori.html">Categories</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Productlist</h1>
+      <section id="sectionproduktliste"></section>
+    </main>
+
+    <template id="smallProductTemplate">
+      <article class="article">
+        <img
+          class="imgproduktliste"
+          src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+          alt="item"
+        />
+        <h3>...</h3>
+        <p class="lystekst">
+          <span class="type">...</span> |
+          <span class="brand">...</span>
+        </p>
+
+        <!-- <p>DKK <span class="pris">...</span>,-</p> -->
+        <p class="pris">DKK <span>...</span>,-</p>
+        <div class="discounted">
+          <p>Now DKK <span></span>,-</p>
+          <p><span></span>%</p>
+        </div>
+
+        <a class="link" href="produkt.html">Read more</a>
+      </article>
+    </template>
+
+    <footer></footer>
+
+    <script src="../js/produktliste.js"></script>
+  </body>
+</html>

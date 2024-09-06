@@ -1,0 +1,62 @@
+a {
+  color: white;
+}
+
+.kategorih2 {
+  margin-bottom: 2em;
+  margin-top: 4em;
+}
+
+.classcategorylist {
+  padding: 0;
+  margin: 10px;
+}
+
+div#divkategori li {
+  /* Denne class er designet på oversigten(boxene) over kategorierne */
+  background-color: rgba(135, 0, 0, 1);
+  color: white;
+
+  text-decoration: none;
+  padding: 2em;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.soldout {
+  display: block;
+  align-self: flex-start;
+  background-color: tomato;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+  /* Denne media@ er for en STOR skærm */
+  #categoryList {
+    /* Denne class opdeler de 4 articles i grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 799px) {
+  /* Denne media@ er for en LILLE skærm */
+  #categoryList {
+    /* Denne class opdeler de 4 articles i grid */
+    display: grid;
+    grid-template-columns: (1fr);
+    gap: 3rem;
+  }
+}
