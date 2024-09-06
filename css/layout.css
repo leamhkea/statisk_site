@@ -1,6 +1,11 @@
 /* https://ale-kea.dk/T7-ekempel-site-statisk/productlist.html */
 
 /* ------------------------ INDEX ------------------------*/
+
+.indexp {
+  margin-top: 2em;
+}
+
 /*------------------------- KATEGORI -----------------------*/
 
 .kategoriliste {
